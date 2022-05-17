@@ -1,27 +1,43 @@
-# functions go here
-def num_check(question):
+from this import d
 
 
-    # checks that users enter a number that is greater than zero
-    valid = False
-    while not valid:
+def new_func():
+    def num_check(question):
 
-        error = "Please enter a number more than zero"
 
-        try:
-        
-            # ask user to enter a number
-            response = float(input(question))
+        # checks that users enter a number that is greater than zero
+        valid = False
+        while not valid:
 
-            # checks number is more than zero
-            if response > 0:
-                return response
+            error = "Please enter a number more than zero"
 
-            #outputs error if input is invalid
-            else:
-                print("Please enter a number more than zero")
-                print()
+            try:
+            
+                # ask user to enter a number
+                response = float(input(question))
 
-        except ValueError:
-            print(error)
+                # checks number is more than zero
+                if response > 0:
+                    return response
 
+                #outputs error if input is invalid
+                else:
+                    print("Please enter a number more than zero")
+                    print()
+
+            except ValueError:
+                print(error)
+
+
+
+#calculate
+    width = num_check("What is the width")
+    height = num_check("what is the height")
+
+    area = width * height
+    perimeter = 2 *(width + height)
+
+    print("To pay${:.2f}".format(area))
+    print("perimeter: {} units".format(perimeter))
+
+return new_func()
