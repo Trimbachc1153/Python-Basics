@@ -25,9 +25,16 @@ def num_check(question):
         except ValueError:
             print(error)
 
+# main routine goes here
 width = num_check("Width: ")
+height = num_check("height: ")
 
+area = width * height
 
+perimeter = 2 * (width + height)
+
+print("Perimeter: {} units".format(perimeter))
+print("Area: {} square units".format(area))
 
 
 
