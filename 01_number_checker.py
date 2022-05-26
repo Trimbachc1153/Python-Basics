@@ -10,7 +10,7 @@ def num_check(question):
 
         try:
         
-            # ask useer to enter a number
+            # ask user to enter a number
             response = float(input(question))
 
             # checks number is more than zero
@@ -26,19 +26,24 @@ def num_check(question):
             print(error)
 
 # main routine goes here
-width = num_check("Width: ")
-height = num_check("height: ")
-
-area = width * height
-
-perimeter = 2 * (width + height)
-
-print("Perimeter: {} units".format(perimeter))
-print("Area: {} square units".format(area))
+keep_going = ""
+while keep_going == "":
 
 
+    width = num_check("Width: ")
+    height = num_check("height: ")
 
+    area = width * height
 
+    perimeter = 2 * (width + height)
+
+    print("Perimeter: {} units".format(perimeter))
+    print("Area: {} square units".format(area))
+
+    keep_going = input("press <enter> to keep going or any key to quit")
+
+print()
+print("thanks for using my area / perimeter calculer")
 
 
 
